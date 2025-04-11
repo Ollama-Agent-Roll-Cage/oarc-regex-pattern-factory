@@ -71,8 +71,8 @@ def hello_world():
     print("Hello, world!")
     return 42
 ```
-"""
 
+```python
 # Extract JSON
 json_data = oarc.extract_json(llm_response)
 print("JSON Data:", json_data)
