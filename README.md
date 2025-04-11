@@ -53,7 +53,8 @@ Extract content using built-in patterns:
 
 ```python
 # Example LLM response with different content types
-llm_response = """
+llm_response =
+"""
 Here's some JSON data:
 
 ```json
@@ -70,6 +71,8 @@ And here's a Python example:
 def hello_world():
     print("Hello, world!")
     return 42
+```
+"""
 ```
 
 ```python
