@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oarc-regex-pattern-factory"
+version = "0.1.0"
+description = "RegEx Pattern Factory for extracting and generating patterns from content"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "Apache 2.0"}
+authors = [
+    {name = "Leo Borcherding"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+keywords = ["regex", "pattern", "extraction", "ollama", "llm"]
+dependencies = [
+    "pandas>=2.2.3",
+    "pyarrow>=19.0.1",
+    "ollama>=0.4.7"
+]
+
+dev = [
+    "pytest>=8.3.5",
+    "pytest-cov>=6.1.1",
+    "black>=25.1.0",
+    "isort>=6.0.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/Ollama-Agent-Roll-Cage/oarc-regex-pattern-factory"
+Issues = "https://github.com/Ollama-Agent-Roll-Cage/oarc-regex-pattern-factory/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ["py38", "py39", "py310", "py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "--cov=src"
