@@ -75,7 +75,7 @@ def hello_world():
 ```
 ```
 
-# Extract Code Types from Content
+Extract Code Types from Content:
 
 ```python
 # Extract JSON
